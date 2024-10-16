@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            font-family: "Mitr", sans-serif;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            background-color: rgba(178, 172, 172, 0.737);
+        }
+
+        .home-section {
+            background: linear-gradient(to bottom, #d3d3d3, #a9a9a9);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .btns {
+            background-color: rgba(75, 73, 73, 0.737);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btns:hover {
+            background-color: #5a6268;
+        }
+
+        .about-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #343a40;
+        }
+
+        .about-section {
+            padding: 60px 0;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: flex-start;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-photo {
+            width: 150px;
+            height: auto;
+            border-radius: 40%;
+            margin-right: 20px;
+        }
+
+        .about-text {
+            font-size: 1.2rem;
+            color: #343a40;
+            text-align: justify;
+            flex-grow: 1;
+            line-height: 1.6;
+        }
+
+        .card-section {
+            padding: 60px 0;
+            background-color: #f8f9fa;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            max-width: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #6c757d;
+        }
+
+        .bg-light {
+            background-color: #f8f9fa;
+            padding: 60px 0;
+        }
+
+        h2 {
+            color: #343a40;
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: #323334;
+            box-shadow: 0 0 5px rgba(45, 46, 46, 0.5);
+        }
+
+        .footer {
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(178, 172, 172, 0.737);
+            color: black;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        .footer ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        .footer ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        .footer a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg fixed-top text-uppercase">
+        <div class="container-fluid">
+            <a class="navbar-brand font-weight-bold" href="#">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active px-lg-4" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active px-lg-4" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active px-lg-4" href="#card-section">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active px-lg-4" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Home-->
+    <div id="home" class="home-section">
+        <div class="container">
+            <h1 class="display-4">Fadila Malika Sandi</h1>
+            <p class="lead">FULLSTACK DEVELOPER</p>
+            <button class="btns">Explore About Me</button>
+        </div>
+    </div>
+
+    <!--About Me-->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h1 class="about-title">About Me</h1>
+            <div class="about-content">
+                <img src="{{ url_for('static', filename='aboutme.jpg') }}" class="about-photo" alt="About Me">
+                <p class="about-text">I am a Full Stack Developer with experience in various web technologies. I possess
+                    skills in both frontend and backend development, and I am committed to creating intuitive and
+                    responsive applications. Additionally, I enjoy new challenges and continuously learn to improve my
+                    skills.</p>
+            </div>
+        </div>
+    </section>
+
+    <!--Experience-->
+    <section id="card-section" class="card-section">
+        <div class="container">
+            <h1 class="about-title text-center">Experience</h1>
+            <div class="row d-flex justify-content-center align-items-center">
+                <!-- Card 1 -->
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card text-center">
+                        <img src="{{ url_for('static', filename='hima.jpg') }}" class="card-img-top" alt="Himatro">
+                        <div class="card-body">
+                            <h5 class="card-title">Himatro</h5>
+                            <p class="card-text">Communication and Information Department Staff.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card text-center">
+                        <img src="{{ url_for('static', filename='aslab.jpg') }}" class="card-img-top"
+                            alt="Laboratory Assistant">
+                        <div class="card-body">
+                            <h5 class="card-title">Laboratory Assistant</h5>
+                            <p class="card-text">Digital Laboratory at University of Lampung.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
+                    <div class="card text-center">
+                        <img src="{{ url_for('static', filename='eea.jpg') }}" class="card-img-top" alt="EEA Activities">
+                        <div class="card-body">
+                            <h5 class="card-title">EEA Activities</h5>
+                            <p class="card-text">Activities conducted by students.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Contact-->
+    <section id="contact" class="bg-light">
+        <div class="container">
+            <h2 class="text-center">Contact Me</h2>
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <form id="contactForm" method="POST" action="/submit">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
+                        </div>
+                        <button type="submit" class="btns">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <p>&copy; 2024 Fadila Malika Sandi</p>
+            <ul>
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">GitHub</a></li>
+                <li><a href="#">Twitter</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-zog/XnfMQPD6yXXv+FrvmcLwTrqOAEiTRyK6XxLfxAdMcpVyq0OVe9eo5fCo2xKp"
+        crossorigin="anonymous"></script>
+
+    <script>
+        document.getElementById('contactForm').onsubmit = async function(event) {
+            event.preventDefault(); // Mencegah pemuatan ulang halaman
+
+            const formData = new FormData(this); // Ambil data formulir
+            const response = await fetch('/submit', {
+                method: 'POST',
+                body: formData
+            });
+
+            const result = await response.json(); // Ambil respons dalam format JSON
+
+            if (response.ok) {
+                alert(result.msg); // Tampilkan pesan sukses
+                this.reset(); // Reset formulir
+            } else {
+                alert('Error: ' + result.error); // Tampilkan pesan kesalahan
+            }
+        };
+    </script>
+</body>
+
+</html>
